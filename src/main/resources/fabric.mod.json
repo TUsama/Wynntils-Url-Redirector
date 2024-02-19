@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "wynntils_url_redirector",
+	"version": "${version}",
+	"name": "wynntils_url_redirector",
+	"description": "Redirect the download links of Wynntils to a responsive mirror.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/wynntils_url_redirector/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.clefal.wynntils_url_redirector"
+		]
+	},
+	"mixins": [
+		"wynntils_url_redirector.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
