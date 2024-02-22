@@ -1,20 +1,17 @@
 package com.clefal.mixin;
 
-import com.clefal.wynntils_url_redirector;
-import com.wynntils.core.WynntilsMod;
+import com.wynntils.core.net.UrlManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-import java.io.InputStream;
-
-@Mixin(WynntilsMod.class)
+@Mixin(UrlManager.class)
 public class RedirectorMixin {
-    @Inject(at = @At("HEAD"), method = "getModResourceAsStream", remap = false, cancellable = true)
-    private static void replaceToResourcesLocation(String resourceName, CallbackInfoReturnable<InputStream> cir) {
-        InputStream resourceAsStream = wynntils_url_redirector.class.getClassLoader().getResourceAsStream("assets/wynntils_url_redirector/" + resourceName);
-        cir.setReturnValue(resourceAsStream);
-        cir.cancel();
+    @ModifyArg(method = "readUrls",
+            at = @At(value = "INVOKE", target = "Lcom/google/gson/Gson;fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;"),
+            index = 0,
+            remap = false)
+    private String modifyURL(String json) {
+        return json.replaceAll("raw.githubusercontent.com/Wynntils/Static-Storage/main", "gitea.com/TUsama/Static-Storage/raw/branch/main");
     }
 }
