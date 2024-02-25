@@ -1,6 +1,5 @@
 package com.clefal.mixin;
 
-import com.wynntils.core.WynntilsMod;
 import com.wynntils.services.map.MapService;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,7 +12,6 @@ public class MapServiceMixin {
             index = 0,
             remap = false)
     private String modifyURL(String json) {
-        return json.replaceAll("raw.githubusercontent.com", "fastly.jsdelivr.net/gh")
-                .replaceAll("Static-Storage/main", "Static-Storage@main");
+        return json.replaceAll("raw.githubusercontent.com", "i0.wp.com/raw.githubusercontent.com");
     }
 }

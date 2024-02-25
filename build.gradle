@@ -94,6 +94,7 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
+	changelog = "change the mirror of map to i0.wp.com"
 	type = STABLE
 	modLoaders.add("fabric")
 
