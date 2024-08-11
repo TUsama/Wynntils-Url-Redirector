@@ -14,7 +14,6 @@ public class UrlManagerMixin {
     private String modifyURL(String json) {
         return json.replaceAll("raw.githubusercontent.com", "fastly.jsdelivr.net/gh")
                 .replaceAll("Static-Storage/main", "Static-Storage@main")
-                .replaceAll("WynntilsWebsite-API/master", "WynntilsWebsite-API@master")
-                .replaceAll("translate.googleapis.com", "gtransapi.wuki.moe");
+                .replaceAll("WynntilsWebsite-API/master", "WynntilsWebsite-API@master");
     }
 }

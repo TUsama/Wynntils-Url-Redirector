@@ -1,7 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
-	id "me.modmuss50.mod-publish-plugin" version "0.5.1"
+	id "me.modmuss50.mod-publish-plugin" version "0.6.2"
 }
 
 version = project.mod_version
@@ -94,7 +94,7 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
-	changelog = "change the mirror of map to i0.wp.com"
+	changelog = "delete the translation service provided by Wuki"
 	type = STABLE
 	modLoaders.add("fabric")
 
@@ -103,7 +103,8 @@ publishMods {
 		projectId = "TjzukcJ6"
 		minecraftVersions.add("1.20.2")
 
-
-		requires {slug = "wynntils"}
+		requires {
+			id = "dU5Gb9Ab"
+		}
 	}
 }
