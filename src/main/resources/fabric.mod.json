@@ -5,7 +5,7 @@
 	"name": "wynntils_url_redirector",
 	"description": "Redirect the download links of Wynntils to a responsive mirror.",
 	"authors": [
-		"Me!"
+		"Clefal"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -13,9 +13,9 @@
 	},
 	"license": "MIT License",
 	"icon": "assets/wynntils_url_redirector/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
+		"client": [
           "com.clefal.wynntils_url_redirector"
 		]
 	},

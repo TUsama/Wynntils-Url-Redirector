@@ -94,14 +94,15 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
-	changelog = "delete the translation service provided by Wuki"
+	changelog = "add command for route change, root command is /wur"
 	type = STABLE
 	modLoaders.add("fabric")
 
 	modrinth {
 		accessToken = file("Key.txt").text
 		projectId = "TjzukcJ6"
-		minecraftVersions.add("1.20.2")
+
+		minecraftVersions.addAll("1.20.2", "1.21", "1.21.1")
 
 		requires {
 			id = "dU5Gb9Ab"
