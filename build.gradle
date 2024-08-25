@@ -94,7 +94,7 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
-	changelog = "add command for route change, root command is /wur"
+	changelog = "fix cap issue"
 	type = STABLE
 	modLoaders.add("fabric")
 

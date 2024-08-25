@@ -35,7 +35,7 @@ public class ModeArgument implements ArgumentType<EnumModes> {
 
     @Override
     public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder) {
-        return SharedSuggestionProvider.suggest(Arrays.stream(EnumModes.values()).map(x -> x.toString().toLowerCase(Locale.ROOT)).toList(), builder);
+        return SharedSuggestionProvider.suggest(Arrays.stream(EnumModes.values()).map(Enum::toString).toList(), builder);
     }
 
     @Override
