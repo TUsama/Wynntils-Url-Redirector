@@ -1,4 +1,4 @@
-package com.clefal.mixin;
+package com.clefal.mixin.client;
 
 import com.wynntils.core.net.UrlManager;
 import org.spongepowered.asm.mixin.Mixin;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(UrlManager.class)
 public class UrlManagerMixin {
-    @ModifyArg(method = "readUrls",
+    @ModifyArg(method = "readUrlMapper",
             at = @At(value = "INVOKE", target = "Lcom/google/gson/Gson;fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;"),
             index = 0,
             remap = false)

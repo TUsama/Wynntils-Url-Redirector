@@ -15,12 +15,20 @@
 	"icon": "assets/wynntils_url_redirector/icon.png",
 	"environment": "client",
 	"entrypoints": {
+
+		"main": [
+			"com.clefal.wynntils_url_redirector"
+		],
 		"client": [
-          "com.clefal.wynntils_url_redirector"
+			"com.clefal.wynntils_url_redirector_client"
 		]
 	},
 	"mixins": [
-		"wynntils_url_redirector.mixins.json"
+		"wynntils_url_redirector.mixins.json",
+		{
+			"config": "wynntils_url_redirector.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
 		"fabricloader": ">=0.15.6",

@@ -10,7 +10,6 @@ import net.minecraft.commands.SharedSuggestionProvider;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
 public class ModeArgument implements ArgumentType<EnumModes> {
