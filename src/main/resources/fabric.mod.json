@@ -13,9 +13,8 @@
 	},
 	"license": "MIT License",
 	"icon": "assets/wynntils_url_redirector/icon.png",
-	"environment": "client",
+	"environment": "*",
 	"entrypoints": {
-
 		"main": [
 			"com.clefal.wynntils_url_redirector"
 		],
