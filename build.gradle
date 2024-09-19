@@ -18,7 +18,6 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-	flatDir { dir 'libs' }
 	exclusiveContent {
 		forRepository {
 			maven {
@@ -103,7 +102,7 @@ publishing {
 
 publishMods {
 	file = remapJar.archiveFile
-	changelog = "fix cap issue"
+	changelog = "fix compatibility with Wynntils"
 	type = STABLE
 	modLoaders.add("fabric")
 
