@@ -14,7 +14,6 @@ public class MapServiceMixin {
             index = 0,
             remap = false)
     private String modifyURL(String json) {
-
         return mode.replacement.apply(json);
     }
 }
