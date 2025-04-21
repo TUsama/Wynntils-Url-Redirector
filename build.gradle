@@ -107,10 +107,10 @@ publishMods {
 	modLoaders.add("fabric")
 
 	modrinth {
-		accessToken = file("Key.txt").text
+		accessToken = file("D:\\modrinth-key.txt").text
 		projectId = "TjzukcJ6"
 
-		minecraftVersions.addAll("1.20.2", "1.21", "1.21.1")
+		minecraftVersions.addAll("1.21.4")
 
 		requires {
 			id = "dU5Gb9Ab"

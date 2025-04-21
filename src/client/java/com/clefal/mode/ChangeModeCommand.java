@@ -19,7 +19,7 @@ public class ChangeModeCommand {
                                         .executes(ctx -> {
                                                     EnumModes mode1 = ctx.getArgument("mode", EnumModes.class);
                                                     mode = mode1;
-                                                    Minecraft.getInstance().player.sendSystemMessage(Component.literal("change to " + mode1));
+                                                    Minecraft.getInstance().player.displayClientMessage(Component.literal("change to " + mode1), false);
                                                     return Command.SINGLE_SUCCESS;
                                                 }
                                         )
